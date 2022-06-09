@@ -16,6 +16,6 @@ class TestViews(TestCase):
 
     def test_get_edit_item_page(self):
         item = Item.objects.create(name='test todo item')
-        response = self.client.get('/edit/')
+        response = self.client.get(f'/edit/{item.id}')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'todo/edit_item.html')
