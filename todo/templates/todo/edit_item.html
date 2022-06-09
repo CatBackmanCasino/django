@@ -9,12 +9,12 @@
 </head>
 
 <body>
-    <h1>Add a to do item</h1>
-    <form method="POST" action="add_item">
+    <h1>Edit a todo item:</h1>
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
             <p>
-                <button type="submit">Add Item</button>
+                <button type="submit">Update Item</button>
             </p>
         </div>
 
